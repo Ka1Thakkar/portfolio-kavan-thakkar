@@ -102,8 +102,8 @@ const Experience = () => {
                 <div className=" flex flex-col gap-2 pt-0">
                     {experiences.map((experience, key)=>(
                         <ul key={key} className = { key == 0 ? "" : " pt-36 xl:pt-20 w-full"}>
-                            <li key={key} className={key % 2 === 0 ? "absolute left-[48.75vw] text-left flex text-white gap-5" : "absolute right-[49.75vw] text-right text-white flex-row-reverse flex gap-5 "}>
-                                <div className="lg:w-[10px] lg:h-[10px] rounded-full bg-[#D7BDA3]"></div>
+                            <li key={key} className={key % 2 === 0 ? "absolute left-[50vw] text-left flex text-white gap-5" : "absolute right-[52vw] text-right text-white flex-row-reverse flex gap-5 "}>
+                                {/* <div className="lg:w-[10px] lg:h-[10px] rounded-full bg-[#D7BDA3]"></div> */}
                                 <div className={key%2 === 0 ? "pr-2 xl:pr-28" : "pl-2 xl:pl-28"}>
                                     <div className={int.className}>
                                         <h1 className="font-bold text-xl lg:text-2xl">{experience.place}</h1>
