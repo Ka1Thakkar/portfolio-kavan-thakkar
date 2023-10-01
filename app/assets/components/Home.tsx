@@ -40,6 +40,7 @@ const Main = () => {
             width:"100vw",
             position: "100px",
             borderRadius: "0px",
+            borderWidth : "4px",
         })
 
         gsap.to(scrollRef.current, {y: 20, repeat:-1, duration:1.5, ease: Power2.easeIn, yoyo: true})
@@ -48,7 +49,7 @@ const Main = () => {
     return (
         <section id="home" className=" bg-beige w-full h-screen relative" ref={documentRef}>
             <div className="absolute w-full h-full flex items-center justify-center">
-                <Image src={bg} alt="background image" style={{objectFit: "cover"}} className="w-7/12 h-[125vw] xl:w-max sm:h-max brightness-[110%] rounded-xl border-4 border-black" ref={imageRef} />
+                <Image src={bg} alt="background image" style={{objectFit: "cover"}} className="w-[60vw] h-[80vh] brightness-[110%] rounded-xl border-0 border-black " ref={imageRef} />
             </div>
             <div data-scroll data-scroll-speed = "0.7" className="absolute z-10 flex flex-col justify-center items-center w-full h-full  text-6xl sm:text-8xl md:text-9xl lg:text-[175px] xl:text-[200px] 2xl:text-[250px]">
                 <p className={DM.className + " text"}>HI I'M KAVAN</p>

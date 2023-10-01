@@ -58,12 +58,12 @@ const Cursor = () => {
         hamburgerButton.addEventListener('mouseleave', onMouseLeaveHam)
 
         const onMouseEnterHome = (event) => {
-            gsap.to(scrollDown, {display:"block"})
+            gsap.to(scrollDown, {display:"block", scale : 1, opacity : 1})
             gsap.to(cursor,{scale:3})
         }
 
         const onMouseLeaveHome = (event) => {
-            gsap.to(scrollDown, {display: "none", delay:0, duration:0.2})
+            gsap.to(scrollDown, {display: "none", delay:0, duration:0, scale : 0, opacity : 1})
             gsap.to(cursor, {scale:1})
         }
 
@@ -71,12 +71,12 @@ const Cursor = () => {
         home.addEventListener('mouseleave', onMouseLeaveHome)
 
         const onMouseEnterLink = (event) => {
-            gsap.to(cursorLink, {display:"block"})
+            gsap.to(cursorLink, {display:"block", scale : 1, opacity : 1})
             gsap.to(cursor,{scale:3})
         }
 
         const onMouseLeaveLink = (event) => {
-            gsap.to(cursorLink, {display: "none", delay:0, duration:0})
+            gsap.to(cursorLink, {display: "none", delay:0, duration:0, scale:0, opacity : 0})
             gsap.to(cursor, {scale:1})
         }
 
@@ -87,7 +87,7 @@ const Cursor = () => {
     })
 
     return (
-        <div id="cursor" className={styles.cursor + " md:flex"}>
+        <div id="cursor" className={styles.cursor + " lg:flex"}>
             <div id='scroll-down' className={styles.scrolldown}>
                 <AiOutlineArrowDown />
             </div>
